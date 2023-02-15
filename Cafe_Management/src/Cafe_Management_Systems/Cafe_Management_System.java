@@ -8,8 +8,16 @@ package Cafe_Management_Systems;
  *
  * @author Jaspal
  */
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.awt.Color;
+import java.text.SimpleDateFormat;
+import java.util.Random;
 public class Cafe_Management_System extends javax.swing.JFrame {
-
+double [] drink=new double[5];
+double [] cake=new double[8];
+String [] cost=new String[3];
+double [] i = new double[13];
     /**
      * Creates new form Cafe_Management_System
      */
@@ -27,58 +35,58 @@ public class Cafe_Management_System extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        IceCappuccino = new javax.swing.JCheckBox();
+        Espresso = new javax.swing.JCheckBox();
+        IcedLatte = new javax.swing.JCheckBox();
+        Latte = new javax.swing.JCheckBox();
+        TxtCapp = new javax.swing.JTextField();
+        TxtIceCap = new javax.swing.JTextField();
+        TxtEspresso = new javax.swing.JTextField();
+        TxtIcedLatte = new javax.swing.JTextField();
+        TxtLatte = new javax.swing.JTextField();
+        Cappuccino = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jCheckBox13 = new javax.swing.JCheckBox();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
+        CoffeCake = new javax.swing.JCheckBox();
+        RedVelvetCake = new javax.swing.JCheckBox();
+        BastonCreamPie = new javax.swing.JCheckBox();
+        BlackForestCake = new javax.swing.JCheckBox();
+        Lagos = new javax.swing.JCheckBox();
+        KillBurn = new javax.swing.JCheckBox();
+        Carlton = new javax.swing.JCheckBox();
+        Queens = new javax.swing.JCheckBox();
+        TxtCoffeCake = new javax.swing.JTextField();
+        TxtRedVel = new javax.swing.JTextField();
+        TxtBaston = new javax.swing.JTextField();
+        TxtBlackForest = new javax.swing.JTextField();
         jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
+        TxtLagos = new javax.swing.JTextField();
+        TxtKill = new javax.swing.JTextField();
+        TxtCarlton = new javax.swing.JTextField();
+        TxtQueen = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TxtForm = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        lbCostOfDrinks = new javax.swing.JLabel();
+        lbCostOfCakes = new javax.swing.JLabel();
+        lbServiceCharge = new javax.swing.JLabel();
+        TxtCoD = new javax.swing.JTextField();
+        TxtSC = new javax.swing.JTextField();
+        TxtCoC = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BtnTotalAction = new javax.swing.JButton();
+        BtnReceipt = new javax.swing.JButton();
+        BtnReset = new javax.swing.JButton();
+        BtnExit = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        lbTax = new javax.swing.JLabel();
+        lbSubTotal = new javax.swing.JLabel();
+        lbTotal = new javax.swing.JLabel();
+        TxtTax = new javax.swing.JTextField();
+        TxtTotal = new javax.swing.JTextField();
+        TxtST = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1368, 730));
@@ -87,53 +95,143 @@ public class Cafe_Management_System extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel1.setToolTipText("");
 
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCheckBox1.setText("Cappuccino");
-
-        jCheckBox2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCheckBox2.setText("Ice Cappuccino");
-
-        jCheckBox3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCheckBox3.setText("Espresso");
-
-        jCheckBox4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCheckBox4.setText("Iced Latte");
-
-        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCheckBox5.setText("Latte");
-
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        IceCappuccino.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IceCappuccino.setText("Ice Cappuccino");
+        IceCappuccino.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IceCappuccinoMouseClicked(evt);
+            }
+        });
+        IceCappuccino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                IceCappuccinoActionPerformed(evt);
             }
         });
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Espresso.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Espresso.setText("Espresso");
+        Espresso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EspressoMouseClicked(evt);
+            }
+        });
+        Espresso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                EspressoActionPerformed(evt);
             }
         });
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        IcedLatte.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IcedLatte.setText("Iced Latte");
+        IcedLatte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcedLatteMouseClicked(evt);
+            }
+        });
+        IcedLatte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                IcedLatteActionPerformed(evt);
             }
         });
 
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        Latte.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Latte.setText("Latte");
+        Latte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LatteMouseClicked(evt);
+            }
+        });
+        Latte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                LatteActionPerformed(evt);
             }
         });
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        TxtCapp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtCapp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtCapp.setText("0");
+        TxtCapp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtCapp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtCappMouseClicked(evt);
+            }
+        });
+        TxtCapp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                TxtCappActionPerformed(evt);
+            }
+        });
+
+        TxtIceCap.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtIceCap.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtIceCap.setText("0");
+        TxtIceCap.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtIceCap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtIceCapMouseClicked(evt);
+            }
+        });
+        TxtIceCap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtIceCapActionPerformed(evt);
+            }
+        });
+
+        TxtEspresso.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtEspresso.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtEspresso.setText("0");
+        TxtEspresso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtEspresso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtEspressoMouseClicked(evt);
+            }
+        });
+        TxtEspresso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtEspressoActionPerformed(evt);
+            }
+        });
+
+        TxtIcedLatte.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtIcedLatte.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtIcedLatte.setText("0");
+        TxtIcedLatte.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtIcedLatte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtIcedLatteMouseClicked(evt);
+            }
+        });
+        TxtIcedLatte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtIcedLatteActionPerformed(evt);
+            }
+        });
+
+        TxtLatte.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtLatte.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtLatte.setText("0");
+        TxtLatte.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtLatte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtLatteMouseClicked(evt);
+            }
+        });
+        TxtLatte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtLatteActionPerformed(evt);
+            }
+        });
+
+        Cappuccino.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Cappuccino.setText("Cappuccino");
+        Cappuccino.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CappuccinoMouseClicked(evt);
+            }
+        });
+        Cappuccino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CappuccinoActionPerformed(evt);
             }
         });
 
@@ -143,49 +241,48 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+                    .addComponent(IceCappuccino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Espresso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Cappuccino, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Latte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(IcedLatte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TxtIceCap, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                    .addComponent(TxtCapp)
+                    .addComponent(TxtEspresso)
+                    .addComponent(TxtIcedLatte)
+                    .addComponent(TxtLatte))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox4))
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TxtCapp, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cappuccino))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(IceCappuccino)
+                    .addComponent(TxtIceCap, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Espresso)
+                    .addComponent(TxtEspresso, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IcedLatte)
+                    .addComponent(TxtIcedLatte, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Latte)
+                    .addComponent(TxtLatte, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 350, 260));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 460, 290));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
@@ -197,77 +294,150 @@ public class Cafe_Management_System extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(99, Short.MAX_VALUE)
+                .addContainerGap(167, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addGap(223, 223, 223))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1090, 90));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1320, 90));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel3.setToolTipText("");
 
-        jCheckBox6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jCheckBox6.setText("Coffe Cake");
-        jCheckBox6.setActionCommand("");
-
-        jCheckBox7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jCheckBox7.setText("Red Velvet Cake");
-
-        jCheckBox8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jCheckBox8.setText("Boston Cream Pie");
-
-        jCheckBox9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jCheckBox9.setText("Black Forest Cake");
-
-        jCheckBox10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox10.setText("Lagos Chocolate Cake");
-        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox10ActionPerformed(evt);
+        CoffeCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        CoffeCake.setText("Coffe Cake");
+        CoffeCake.setActionCommand("");
+        CoffeCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CoffeCakeMouseClicked(evt);
             }
         });
 
-        jCheckBox11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox11.setText("Kill Burn Choco Cake");
-
-        jCheckBox12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox12.setText("Carlton Hill Choco Cake");
-
-        jCheckBox13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox13.setText("Queen's Park Choco Cake");
-
-        jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+        RedVelvetCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RedVelvetCake.setText("Red Velvet Cake");
+        RedVelvetCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RedVelvetCakeMouseClicked(evt);
             }
         });
 
-        jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+        BastonCreamPie.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BastonCreamPie.setText("Boston Cream Pie");
+        BastonCreamPie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BastonCreamPieMouseClicked(evt);
             }
         });
 
-        jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+        BlackForestCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BlackForestCake.setText("Black Forest Cake");
+        BlackForestCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BlackForestCakeMouseClicked(evt);
             }
         });
 
-        jTextField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        Lagos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Lagos.setText("Lagos Chocolate Cake");
+        Lagos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LagosMouseClicked(evt);
+            }
+        });
+        Lagos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                LagosActionPerformed(evt);
+            }
+        });
+
+        KillBurn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        KillBurn.setText("Kill Burn Choco Cake");
+        KillBurn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                KillBurnMouseClicked(evt);
+            }
+        });
+
+        Carlton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Carlton.setText("Carlton Hill Choco Cake");
+        Carlton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CarltonMouseClicked(evt);
+            }
+        });
+
+        Queens.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Queens.setText("Queen's Park Choco Cake");
+        Queens.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                QueensMouseClicked(evt);
+            }
+        });
+
+        TxtCoffeCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtCoffeCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtCoffeCake.setText("0");
+        TxtCoffeCake.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtCoffeCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtCoffeCakeMouseClicked(evt);
+            }
+        });
+        TxtCoffeCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtCoffeCakeActionPerformed(evt);
+            }
+        });
+
+        TxtRedVel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtRedVel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtRedVel.setText("0");
+        TxtRedVel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtRedVel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtRedVelMouseClicked(evt);
+            }
+        });
+        TxtRedVel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRedVelActionPerformed(evt);
+            }
+        });
+
+        TxtBaston.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtBaston.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtBaston.setText("0");
+        TxtBaston.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtBaston.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtBastonMouseClicked(evt);
+            }
+        });
+        TxtBaston.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtBastonActionPerformed(evt);
+            }
+        });
+
+        TxtBlackForest.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtBlackForest.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtBlackForest.setText("0");
+        TxtBlackForest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtBlackForest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtBlackForestMouseClicked(evt);
+            }
+        });
+        TxtBlackForest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtBlackForestActionPerformed(evt);
             }
         });
 
@@ -278,31 +448,63 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             }
         });
 
-        jTextField17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        TxtLagos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtLagos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtLagos.setText("0");
+        TxtLagos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtLagos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtLagosMouseClicked(evt);
+            }
+        });
+        TxtLagos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                TxtLagosActionPerformed(evt);
             }
         });
 
-        jTextField18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        TxtKill.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtKill.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtKill.setText("0");
+        TxtKill.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtKill.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtKillMouseClicked(evt);
+            }
+        });
+        TxtKill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                TxtKillActionPerformed(evt);
             }
         });
 
-        jTextField19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        TxtCarlton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtCarlton.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtCarlton.setText("0");
+        TxtCarlton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtCarlton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtCarltonMouseClicked(evt);
+            }
+        });
+        TxtCarlton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                TxtCarltonActionPerformed(evt);
             }
         });
 
-        jTextField20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        TxtQueen.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TxtQueen.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtQueen.setText("0");
+        TxtQueen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        TxtQueen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TxtQueenMouseClicked(evt);
+            }
+        });
+        TxtQueen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                TxtQueenActionPerformed(evt);
             }
         });
 
@@ -312,26 +514,26 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox13)
+                    .addComponent(CoffeCake, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RedVelvetCake, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Queens)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jCheckBox10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCheckBox11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jCheckBox8)
-                    .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addComponent(Lagos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(KillBurn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BastonCreamPie)
+                    .addComponent(BlackForestCake, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Carlton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtCoffeCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtRedVel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtBaston, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtBlackForest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TxtLagos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtKill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtCarlton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtQueen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -341,48 +543,48 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox6)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(CoffeCake)
+                            .addComponent(TxtCoffeCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox7)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(RedVelvetCake)
+                            .addComponent(TxtRedVel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox8)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BastonCreamPie)
+                            .addComponent(TxtBaston, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(5, 5, 5)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox9)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BlackForestCake)
+                            .addComponent(TxtBlackForest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(7, 7, 7)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox10)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Lagos)
+                            .addComponent(TxtLagos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox11)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(KillBurn)
+                    .addComponent(TxtKill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox12)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Carlton)
+                    .addComponent(TxtCarlton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox13)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Queens)
+                    .addComponent(TxtQueen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 360, 260));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 430, 290));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel4.setToolTipText("");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        TxtForm.setColumns(20);
+        TxtForm.setRows(5);
+        jScrollPane1.setViewportView(TxtForm);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -390,49 +592,58 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 360, 370));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 110, 410, 400));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel5.setToolTipText("");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel2.setText("Cost of Drinks");
+        lbCostOfDrinks.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbCostOfDrinks.setText("Cost of Drinks");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel3.setText("Cost of Cakes");
+        lbCostOfCakes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbCostOfCakes.setText("Cost of Cakes");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel4.setText("Service Charge");
+        lbServiceCharge.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbServiceCharge.setText("Service Charge");
 
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        TxtCoD.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtCoD.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtCoD.setText("0");
+        TxtCoD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        TxtCoD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                TxtCoDActionPerformed(evt);
             }
         });
 
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        TxtSC.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtSC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtSC.setText("30");
+        TxtSC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        TxtSC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                TxtSCActionPerformed(evt);
             }
         });
 
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        TxtCoC.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtCoC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtCoC.setText("0");
+        TxtCoC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        TxtCoC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                TxtCoCActionPerformed(evt);
             }
         });
 
@@ -444,17 +655,17 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lbCostOfDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtCoD, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbCostOfCakes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbServiceCharge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(65, 65, 65)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-                            .addComponent(jTextField7))))
+                            .addComponent(TxtCoC, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(TxtSC))))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -462,95 +673,124 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbCostOfDrinks)
+                    .addComponent(TxtCoD, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbCostOfCakes)
+                    .addComponent(TxtCoC, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbServiceCharge)
+                    .addComponent(TxtSC, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 330, 200));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 460, 200));
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel6.setToolTipText("");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Total");
+        BtnTotalAction.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnTotalAction.setText("Total");
+        BtnTotalAction.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTotalActionActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Receipt");
+        BtnReceipt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnReceipt.setText("Receipt");
+        BtnReceipt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnReceiptActionPerformed(evt);
+            }
+        });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("Reset");
+        BtnReset.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnReset.setText("Reset");
+        BtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnResetActionPerformed(evt);
+            }
+        });
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setText("Exit");
+        BtnExit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnExit.setText("Exit");
+        BtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(BtnTotalAction)
+                .addGap(18, 18, 18)
+                .addComponent(BtnReceipt)
+                .addGap(18, 18, 18)
+                .addComponent(BtnReset)
+                .addGap(18, 18, 18)
+                .addComponent(BtnExit)
+                .addGap(26, 26, 26))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(BtnTotalAction)
+                    .addComponent(BtnReceipt)
+                    .addComponent(BtnReset)
+                    .addComponent(BtnExit))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 490, 360, 90));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 520, 410, 90));
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel7.setToolTipText("");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel6.setText("Tax");
+        lbTax.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbTax.setText("Tax");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel7.setText("Sub Total");
+        lbSubTotal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbSubTotal.setText("Sub Total");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel8.setText("Total");
+        lbTotal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbTotal.setText("Total");
 
-        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        TxtTax.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtTax.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtTax.setText("0");
+        TxtTax.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        TxtTax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                TxtTaxActionPerformed(evt);
             }
         });
 
-        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        TxtTotal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtTotal.setText("0");
+        TxtTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        TxtTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                TxtTotalActionPerformed(evt);
             }
         });
 
-        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        TxtST.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtST.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TxtST.setText("0");
+        TxtST.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        TxtST.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                TxtSTActionPerformed(evt);
             }
         });
 
@@ -561,20 +801,20 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                    .addComponent(lbTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbTax, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel7Layout.createSequentialGroup()
                             .addGap(34, 34, 34)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(TxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(TxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(TxtST, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -582,108 +822,501 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                    .addComponent(lbTax)
+                    .addComponent(TxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbSubTotal)
+                    .addComponent(TxtST, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbTotal)
+                    .addComponent(TxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13))
         );
 
-        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 380, 200));
+        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, 430, 200));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TxtCappActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCappActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_TxtCappActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void TxtIceCapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtIceCapActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_TxtIceCapActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void TxtEspressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtEspressoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_TxtEspressoActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void TxtIcedLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtIcedLatteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_TxtIcedLatteActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void TxtLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLatteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_TxtLatteActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void TxtCoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCoDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_TxtCoDActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void TxtSCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtSCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_TxtSCActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void TxtCoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCoCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_TxtCoCActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void TxtTaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtTaxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_TxtTaxActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void TxtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtTotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_TxtTotalActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void TxtSTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtSTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_TxtSTActionPerformed
 
-    private void jCheckBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox10ActionPerformed
+    private void LagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LagosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox10ActionPerformed
+    }//GEN-LAST:event_LagosActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void TxtCoffeCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCoffeCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_TxtCoffeCakeActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void TxtRedVelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRedVelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_TxtRedVelActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void TxtBastonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtBastonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_TxtBastonActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void TxtBlackForestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtBlackForestActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_TxtBlackForestActionPerformed
 
     private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField16ActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void TxtLagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLagosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_TxtLagosActionPerformed
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void TxtKillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtKillActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_TxtKillActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void TxtCarltonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCarltonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }//GEN-LAST:event_TxtCarltonActionPerformed
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void TxtQueenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtQueenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }//GEN-LAST:event_TxtQueenActionPerformed
 
+    private void BtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnResetActionPerformed
+        TxtCoD.setText("0");
+        TxtCoC.setText("0");
+        TxtSC.setText("30");
+        TxtTax.setText("0");
+        TxtST.setText("0");
+        TxtTotal.setText("0");
+        TxtForm.setText(null);
+        TxtCoffeCake.setText("0");
+        TxtRedVel.setText("0");
+        TxtBaston.setText("0");
+        TxtBlackForest.setText("0");
+        TxtLagos.setText("0");
+        TxtKill.setText("0");
+        TxtCarlton.setText("0");
+        TxtQueen.setText("0");
+        TxtCapp.setText("0");
+        TxtIceCap.setText("0");
+        TxtEspresso.setText("0");
+        TxtIcedLatte.setText("0");
+        TxtLatte.setText("0");
+        
+        CoffeCake.setSelected(false);
+        RedVelvetCake.setSelected(false);
+        BastonCreamPie.setSelected(false);
+        BlackForestCake.setSelected(false);
+        Lagos.setSelected(false);
+        KillBurn.setSelected(false);
+        Carlton.setSelected(false);
+        Queens.setSelected(false);
+        Cappuccino.setSelected(false);
+        IceCappuccino.setSelected(false);
+        Espresso.setSelected(false);
+        IcedLatte.setSelected(false);
+        Latte.setSelected(false);
+        
+    }//GEN-LAST:event_BtnResetActionPerformed
+
+    private void BtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BtnExitActionPerformed
+    
+    private void CappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CappuccinoActionPerformed
+        // TODO add your handling code here:
+
+   
+        
+    }//GEN-LAST:event_CappuccinoActionPerformed
+
+    private void BtnReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReceiptActionPerformed
+        // TODO add your handling code here:
+        drink[0]=Double.parseDouble(TxtCapp.getText());
+        drink[1]=Double.parseDouble(TxtIceCap.getText());
+        drink[2]=Double.parseDouble(TxtEspresso.getText());
+        drink[3]=Double.parseDouble(TxtIcedLatte.getText());
+        drink[4]=Double.parseDouble(TxtLatte.getText());
+        cake[0]=Double.parseDouble(TxtCoffeCake.getText());
+        cake[1]=Double.parseDouble(TxtRedVel.getText());
+        cake[2]=Double.parseDouble(TxtBaston.getText());
+        cake[3]=Double.parseDouble(TxtBlackForest.getText());
+        cake[4]=Double.parseDouble(TxtLagos.getText());
+        cake[5]=Double.parseDouble(TxtKill.getText());
+        cake[6]=Double.parseDouble(TxtCarlton.getText());
+        cake[7]=Double.parseDouble(TxtQueen.getText());
+        cost[0]=TxtTax.getText();
+        cost[1]=TxtST.getText();
+        cost[2]=TxtTotal.getText();
+        
+        
+        
+        
+        
+        
+        int refs = 1325 + (int) (Math.random()*4238);
+
+        Calendar timer = Calendar.getInstance();
+        timer.getTime();
+        SimpleDateFormat tTime=new SimpleDateFormat("HH:mm:ss");
+        tTime.format(timer.getTime());
+        SimpleDateFormat Tdate=new SimpleDateFormat("dd-MM-YYYY");
+        Tdate.format(timer.getTime());
+        
+        
+        TxtForm.append(" \t Cafe Management System\n" + 
+                "Reference:\t\t\t " + refs +
+                "\n===========================================\t" +
+                "\nCappuccino:\t\t\t " + drink[0] + 
+                "\nIced Cappuccino:\t\t "+drink[1] +
+                "\nEspresso:\t\t\t " +drink[2] +
+                "\nIced Latte:\t\t\t " +drink[3] +
+                "\nLatte:\t\t\t " +drink[4] + 
+                        "\n===========================================\t\t " + 
+                        "\nCoffe Cake:\t\t\t " + cake[0] + 
+                        "\nRed Velvet Cake:\t\t " + cake[1] + 
+                        "\nBoston Cream Pie:\t\t " + cake[2] +
+                        "\nBlack Forest Cake:\t\t " + cake[3] +
+                        "\nLagos Chocolate Cake:\t\t " + cake[4] +
+                        "\nKillburn Chocolate Cake:\t\t " + cake[5] +
+                        "\nCarltonhill Chocolate Cake:\t\t " + cake[6] +
+                        "\nQueen's Park Chocolate Cake:\t\t " + cake[7] +
+                        "\n===========================================\t" +
+                        "\nTax:\t\t\t " + cost[0] +
+                        "\nSub Total:\t\t\t " + cost[1] +
+                        "\nTotal:\t\t\t " + cost[2] +
+                        "\n===========================================\t" +
+                        "\nDate: " +Tdate.format(timer.getTime()) +
+                        "\tTime: " +tTime.format(timer.getTime()) +
+                " \n\n\tThank You " );
+    }//GEN-LAST:event_BtnReceiptActionPerformed
+
+    private void LatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LatteActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_LatteActionPerformed
+
+    private void IceCappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IceCappuccinoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IceCappuccinoActionPerformed
+
+    private void EspressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspressoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EspressoActionPerformed
+
+    private void IcedLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedLatteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedLatteActionPerformed
+
+    private void CappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CappuccinoMouseClicked
+        // TODO add your handling code here:
+        double cCap=Double.parseDouble(TxtCoD.getText());
+        double bCappuccino= Double.parseDouble(TxtCapp.getText());
+        double iCappuccino=200.00;
+        
+        if(Cappuccino.isSelected()){           
+            i[0] = (bCappuccino*iCappuccino)+cCap;
+            String pDrink = String.format("%.2f", i[0]);
+            TxtCoD.setText(pDrink);            
+        }
+
+    }//GEN-LAST:event_CappuccinoMouseClicked
+
+    private void LatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LatteMouseClicked
+        // TODO add your handling code here:
+        double cLatte=Double.parseDouble(TxtCoD.getText());
+        double bLatte= Double.parseDouble(TxtLatte.getText());
+        double iLatte=99.00;
+        
+        if(Latte.isSelected()){           
+            i[4] = (bLatte*iLatte)+cLatte;
+            String pDrink = String.format("%.2f", i[4]);
+            TxtCoD.setText(pDrink);
+            }
+    }//GEN-LAST:event_LatteMouseClicked
+
+    private void IcedLatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcedLatteMouseClicked
+        // TODO add your handling code here:
+        double cIcedLatte=Double.parseDouble(TxtCoD.getText());
+        double bIcedLatte= Double.parseDouble(TxtIcedLatte.getText());
+        double iIcedLatte=120.00;
+        
+        if(IcedLatte.isSelected()){          
+            i[3] = (bIcedLatte*iIcedLatte)+cIcedLatte;
+            String pDrink = String.format("%.2f", i[3]);
+            TxtCoD.setText(pDrink);           
+        }
+    }//GEN-LAST:event_IcedLatteMouseClicked
+
+    private void IceCappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IceCappuccinoMouseClicked
+        // TODO add your handling code here:
+        double cIceCap=Double.parseDouble(TxtCoD.getText());
+        double bIceCap= Double.parseDouble(TxtIceCap.getText());
+        double iIceCap=60.00;
+        
+        if(IceCappuccino.isSelected()){           
+            i[1] = (bIceCap*iIceCap)+cIceCap;
+            String pDrink = String.format("%.2f", i[1]);
+            TxtCoD.setText(pDrink);            
+        }
+    }//GEN-LAST:event_IceCappuccinoMouseClicked
+
+    private void EspressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EspressoMouseClicked
+        // TODO add your handling code here:
+        double cEspresso=Double.parseDouble(TxtCoD.getText());
+        double bEspresso= Double.parseDouble(TxtEspresso.getText());
+        double iEspresso=50.00;
+        
+        if(Espresso.isSelected()){           
+            i[2] = (bEspresso*iEspresso)+cEspresso;
+            String pDrink = String.format("%.2f", i[2]);
+            TxtCoD.setText(pDrink);          
+        }
+    }//GEN-LAST:event_EspressoMouseClicked
+
+    private void CoffeCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoffeCakeMouseClicked
+        // TODO add your handling code here:
+        double cCoffeCake=Double.parseDouble(TxtCoC.getText());
+        double bCoffeCake= Double.parseDouble(TxtCoffeCake.getText());
+        double iCoffeCake=80.00;
+        
+        if(CoffeCake.isSelected()){           
+            i[5] = (bCoffeCake*iCoffeCake)+cCoffeCake;
+            String pCoffeCake = String.format("%.2f", i[5]);
+            TxtCoC.setText(pCoffeCake);          
+        }
+    }//GEN-LAST:event_CoffeCakeMouseClicked
+
+    private void RedVelvetCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedVelvetCakeMouseClicked
+        // TODO add your handling code here:
+        double cRedVelvet=Double.parseDouble(TxtCoC.getText());
+        double bRedVelvet= Double.parseDouble(TxtRedVel.getText());
+        double iRedVelvet=120.00;
+        
+        if(RedVelvetCake.isSelected()){           
+            i[6] = (bRedVelvet*iRedVelvet)+cRedVelvet;
+            String pRedVelvet = String.format("%.2f", i[6]);
+            TxtCoC.setText(pRedVelvet);          
+        }
+    }//GEN-LAST:event_RedVelvetCakeMouseClicked
+
+    private void BastonCreamPieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BastonCreamPieMouseClicked
+        // TODO add your handling code here:
+        double cBaston=Double.parseDouble(TxtCoC.getText());
+        double bBaston= Double.parseDouble(TxtBaston.getText());
+        double iBaston=150.00;
+        
+        if(BastonCreamPie.isSelected()){           
+            i[7] = (bBaston*iBaston)+cBaston;
+            String pBaston = String.format("%.2f", i[7]);
+            TxtCoC.setText(pBaston);          
+        }
+    }//GEN-LAST:event_BastonCreamPieMouseClicked
+
+    private void BlackForestCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BlackForestCakeMouseClicked
+        // TODO add your handling code here:
+        double cBlack=Double.parseDouble(TxtCoC.getText());
+        double bBlack= Double.parseDouble(TxtBlackForest.getText());
+        double iBlack=130.00;
+        
+        if(BlackForestCake.isSelected()){           
+            i[8] = (bBlack*iBlack)+cBlack;
+            String pBlack = String.format("%.2f", i[8]);
+            TxtCoC.setText(pBlack);          
+        }
+    }//GEN-LAST:event_BlackForestCakeMouseClicked
+
+    private void LagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LagosMouseClicked
+        // TODO add your handling code here:
+        double cLagos=Double.parseDouble(TxtCoC.getText());
+        double bLagos= Double.parseDouble(TxtLagos.getText());
+        double iLagos=150.00;
+        
+        if(Lagos.isSelected()){           
+            i[9] = (bLagos*iLagos)+cLagos;
+            String pLagos = String.format("%.2f", i[9]);
+            TxtCoC.setText(pLagos);          
+        }
+    }//GEN-LAST:event_LagosMouseClicked
+
+    private void BtnTotalActionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTotalActionActionPerformed
+        // TODO add your handling code here:
+        drink[0]=Double.parseDouble(TxtCoD.getText());
+        drink[1]=Double.parseDouble(TxtCoC.getText());
+        drink[2]=Double.parseDouble(TxtSC.getText());
+        
+       
+        double cTotal1=(drink[0]+drink[1]+drink[2]);
+        String iTaxTotal = String.format("Rs %.2f", cTotal1/100);
+        TxtTax.setText(iTaxTotal);
+        
+        double subTotal=(cTotal1);
+        String isubTotal=String.format("Rs %.2f", subTotal);
+        TxtST.setText(isubTotal);
+        
+        double allTotal=(cTotal1);
+        String iTotal=String.format("Rs %.2f",allTotal + (allTotal/100));
+        TxtTotal.setText(iTotal);
+        
+        String CostD = String.format("Rs %.2f",drink[0]);
+        TxtCoD.setText(CostD);
+        
+        String CostC = String.format("Rs %.2f",drink[1]);
+        TxtCoC.setText(CostC);
+        
+        String Serv = String.format("Rs %.2f",drink[2]);
+        TxtSC.setText(Serv);
+    }//GEN-LAST:event_BtnTotalActionActionPerformed
+
+    private void TxtCappMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtCappMouseClicked
+        // TODO add your handling code here:
+        TxtCapp.setText(null);
+        
+    }//GEN-LAST:event_TxtCappMouseClicked
+
+    private void KillBurnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KillBurnMouseClicked
+        // TODO add your handling code here:
+         double cKillBurn=Double.parseDouble(TxtCoC.getText());
+        double bKillBurn= Double.parseDouble(TxtKill.getText());
+        double iKillBurn=110.00;
+        
+        if(KillBurn.isSelected()){           
+            i[10] = (bKillBurn*iKillBurn)+cKillBurn;
+            String pKillBurn = String.format("%.2f", i[10]);
+            TxtCoC.setText(pKillBurn);          
+        }
+    }//GEN-LAST:event_KillBurnMouseClicked
+
+    private void CarltonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CarltonMouseClicked
+        // TODO add your handling code here:
+        double cCarlton=Double.parseDouble(TxtCoC.getText());
+        double bCarlton= Double.parseDouble(TxtCarlton.getText());
+        double iCarlton=170.00;
+        
+        if(Carlton.isSelected()){           
+            i[11] = (bCarlton*iCarlton)+cCarlton;
+            String pCarlton = String.format("%.2f", i[11]);
+            TxtCoC.setText(pCarlton);          
+        }
+    }//GEN-LAST:event_CarltonMouseClicked
+
+    private void QueensMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QueensMouseClicked
+        // TODO add your handling code here:
+        double cQueens=Double.parseDouble(TxtCoC.getText());
+        double bQueens= Double.parseDouble(TxtQueen.getText());
+        double iQueens=160.00;
+        
+        if(Queens.isSelected()){           
+            i[12] = (bQueens*iQueens)+cQueens;
+            String pQueens = String.format("%.2f", i[12]);
+            TxtCoC.setText(pQueens);          
+        }
+    }//GEN-LAST:event_QueensMouseClicked
+
+    private void TxtCoffeCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtCoffeCakeMouseClicked
+        // TODO add your handling code here:
+        TxtCoffeCake.setText(null);
+    }//GEN-LAST:event_TxtCoffeCakeMouseClicked
+
+    private void TxtIceCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtIceCapMouseClicked
+        // TODO add your handling code here:
+        TxtIceCap.setText(null);
+    }//GEN-LAST:event_TxtIceCapMouseClicked
+
+    private void TxtEspressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtEspressoMouseClicked
+        // TODO add your handling code here:
+        TxtEspresso.setText(null);
+    }//GEN-LAST:event_TxtEspressoMouseClicked
+
+    private void TxtIcedLatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtIcedLatteMouseClicked
+        // TODO add your handling code here:
+        TxtIcedLatte.setText(null);
+    }//GEN-LAST:event_TxtIcedLatteMouseClicked
+
+    private void TxtLatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtLatteMouseClicked
+        // TODO add your handling code here:
+        TxtLatte.setText(null);
+    }//GEN-LAST:event_TxtLatteMouseClicked
+
+    private void TxtRedVelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtRedVelMouseClicked
+        // TODO add your handling code here:
+        TxtRedVel.setText(null);
+    }//GEN-LAST:event_TxtRedVelMouseClicked
+
+    private void TxtBastonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtBastonMouseClicked
+        // TODO add your handling code here:
+        TxtBaston.setText(null);
+    }//GEN-LAST:event_TxtBastonMouseClicked
+
+    private void TxtBlackForestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtBlackForestMouseClicked
+        // TODO add your handling code here:
+         TxtBlackForest.setText(null);
+    }//GEN-LAST:event_TxtBlackForestMouseClicked
+
+    private void TxtLagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtLagosMouseClicked
+        // TODO add your handling code here:
+        TxtLagos.setText(null);
+    }//GEN-LAST:event_TxtLagosMouseClicked
+
+    private void TxtKillMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtKillMouseClicked
+        // TODO add your handling code here:
+        TxtKill.setText(null);
+    }//GEN-LAST:event_TxtKillMouseClicked
+
+    private void TxtCarltonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtCarltonMouseClicked
+        // TODO add your handling code here:
+        TxtCarlton.setText(null);
+    }//GEN-LAST:event_TxtCarltonMouseClicked
+
+    private void TxtQueenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtQueenMouseClicked
+        // TODO add your handling code here:
+        TxtQueen.setText(null);
+    }//GEN-LAST:event_TxtQueenMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
@@ -720,30 +1353,44 @@ public class Cafe_Management_System extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox BastonCreamPie;
+    private javax.swing.JCheckBox BlackForestCake;
+    private javax.swing.JButton BtnExit;
+    private javax.swing.JButton BtnReceipt;
+    private javax.swing.JButton BtnReset;
+    private javax.swing.JButton BtnTotalAction;
+    private javax.swing.JCheckBox Cappuccino;
+    private javax.swing.JCheckBox Carlton;
+    private javax.swing.JCheckBox CoffeCake;
+    private javax.swing.JCheckBox Espresso;
+    private javax.swing.JCheckBox IceCappuccino;
+    private javax.swing.JCheckBox IcedLatte;
+    private javax.swing.JCheckBox KillBurn;
+    private javax.swing.JCheckBox Lagos;
+    private javax.swing.JCheckBox Latte;
+    private javax.swing.JCheckBox Queens;
+    private javax.swing.JCheckBox RedVelvetCake;
+    private javax.swing.JTextField TxtBaston;
+    private javax.swing.JTextField TxtBlackForest;
+    private javax.swing.JTextField TxtCapp;
+    private javax.swing.JTextField TxtCarlton;
+    private javax.swing.JTextField TxtCoC;
+    private javax.swing.JTextField TxtCoD;
+    private javax.swing.JTextField TxtCoffeCake;
+    private javax.swing.JTextField TxtEspresso;
+    private javax.swing.JTextArea TxtForm;
+    private javax.swing.JTextField TxtIceCap;
+    private javax.swing.JTextField TxtIcedLatte;
+    private javax.swing.JTextField TxtKill;
+    private javax.swing.JTextField TxtLagos;
+    private javax.swing.JTextField TxtLatte;
+    private javax.swing.JTextField TxtQueen;
+    private javax.swing.JTextField TxtRedVel;
+    private javax.swing.JTextField TxtSC;
+    private javax.swing.JTextField TxtST;
+    private javax.swing.JTextField TxtTax;
+    private javax.swing.JTextField TxtTotal;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -752,26 +1399,12 @@ public class Cafe_Management_System extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel lbCostOfCakes;
+    private javax.swing.JLabel lbCostOfDrinks;
+    private javax.swing.JLabel lbServiceCharge;
+    private javax.swing.JLabel lbSubTotal;
+    private javax.swing.JLabel lbTax;
+    private javax.swing.JLabel lbTotal;
     // End of variables declaration//GEN-END:variables
 }
