@@ -967,9 +967,6 @@ double [] i = new double[13];
     }//GEN-LAST:event_BtnExitActionPerformed
     
     private void CappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CappuccinoActionPerformed
-        // TODO add your handling code here:
-
-   
         
     }//GEN-LAST:event_CappuccinoActionPerformed
 
@@ -1052,7 +1049,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_IcedLatteActionPerformed
 
     private void CappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CappuccinoMouseClicked
-        // TODO add your handling code here:
+
         double cCap=Double.parseDouble(TxtCoD.getText());
         double bCappuccino= Double.parseDouble(TxtCapp.getText());
         double iCappuccino=200.00;
@@ -1066,7 +1063,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_CappuccinoMouseClicked
 
     private void LatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LatteMouseClicked
-        // TODO add your handling code here:
+
         double cLatte=Double.parseDouble(TxtCoD.getText());
         double bLatte= Double.parseDouble(TxtLatte.getText());
         double iLatte=99.00;
@@ -1079,7 +1076,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_LatteMouseClicked
 
     private void IcedLatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcedLatteMouseClicked
-        // TODO add your handling code here:
+
         double cIcedLatte=Double.parseDouble(TxtCoD.getText());
         double bIcedLatte= Double.parseDouble(TxtIcedLatte.getText());
         double iIcedLatte=120.00;
@@ -1092,7 +1089,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_IcedLatteMouseClicked
 
     private void IceCappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IceCappuccinoMouseClicked
-        // TODO add your handling code here:
+
         double cIceCap=Double.parseDouble(TxtCoD.getText());
         double bIceCap= Double.parseDouble(TxtIceCap.getText());
         double iIceCap=60.00;
@@ -1105,7 +1102,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_IceCappuccinoMouseClicked
 
     private void EspressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EspressoMouseClicked
-        // TODO add your handling code here:
+
         double cEspresso=Double.parseDouble(TxtCoD.getText());
         double bEspresso= Double.parseDouble(TxtEspresso.getText());
         double iEspresso=50.00;
@@ -1118,7 +1115,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_EspressoMouseClicked
 
     private void CoffeCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoffeCakeMouseClicked
-        // TODO add your handling code here:
+
         double cCoffeCake=Double.parseDouble(TxtCoC.getText());
         double bCoffeCake= Double.parseDouble(TxtCoffeCake.getText());
         double iCoffeCake=80.00;
@@ -1131,7 +1128,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_CoffeCakeMouseClicked
 
     private void RedVelvetCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedVelvetCakeMouseClicked
-        // TODO add your handling code here:
+
         double cRedVelvet=Double.parseDouble(TxtCoC.getText());
         double bRedVelvet= Double.parseDouble(TxtRedVel.getText());
         double iRedVelvet=120.00;
@@ -1144,7 +1141,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_RedVelvetCakeMouseClicked
 
     private void BastonCreamPieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BastonCreamPieMouseClicked
-        // TODO add your handling code here:
+
         double cBaston=Double.parseDouble(TxtCoC.getText());
         double bBaston= Double.parseDouble(TxtBaston.getText());
         double iBaston=150.00;
@@ -1157,7 +1154,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_BastonCreamPieMouseClicked
 
     private void BlackForestCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BlackForestCakeMouseClicked
-        // TODO add your handling code here:
+
         double cBlack=Double.parseDouble(TxtCoC.getText());
         double bBlack= Double.parseDouble(TxtBlackForest.getText());
         double iBlack=130.00;
@@ -1170,7 +1167,7 @@ double [] i = new double[13];
     }//GEN-LAST:event_BlackForestCakeMouseClicked
 
     private void LagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LagosMouseClicked
-        // TODO add your handling code here:
+
         double cLagos=Double.parseDouble(TxtCoC.getText());
         double bLagos= Double.parseDouble(TxtLagos.getText());
         double iLagos=150.00;
@@ -1183,7 +1180,6 @@ double [] i = new double[13];
     }//GEN-LAST:event_LagosMouseClicked
 
     private void BtnTotalActionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTotalActionActionPerformed
-        // TODO add your handling code here:
         drink[0]=Double.parseDouble(TxtCoD.getText());
         drink[1]=Double.parseDouble(TxtCoC.getText());
         drink[2]=Double.parseDouble(TxtSC.getText());
@@ -1212,14 +1208,11 @@ double [] i = new double[13];
     }//GEN-LAST:event_BtnTotalActionActionPerformed
 
     private void TxtCappMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtCappMouseClicked
-        // TODO add your handling code here:
-        TxtCapp.setText(null);
-        
+        TxtCapp.setText(null);        
     }//GEN-LAST:event_TxtCappMouseClicked
 
     private void KillBurnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KillBurnMouseClicked
-        // TODO add your handling code here:
-         double cKillBurn=Double.parseDouble(TxtCoC.getText());
+        double cKillBurn=Double.parseDouble(TxtCoC.getText());
         double bKillBurn= Double.parseDouble(TxtKill.getText());
         double iKillBurn=110.00;
         
@@ -1231,7 +1224,6 @@ double [] i = new double[13];
     }//GEN-LAST:event_KillBurnMouseClicked
 
     private void CarltonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CarltonMouseClicked
-        // TODO add your handling code here:
         double cCarlton=Double.parseDouble(TxtCoC.getText());
         double bCarlton= Double.parseDouble(TxtCarlton.getText());
         double iCarlton=170.00;
@@ -1244,7 +1236,6 @@ double [] i = new double[13];
     }//GEN-LAST:event_CarltonMouseClicked
 
     private void QueensMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QueensMouseClicked
-        // TODO add your handling code here:
         double cQueens=Double.parseDouble(TxtCoC.getText());
         double bQueens= Double.parseDouble(TxtQueen.getText());
         double iQueens=160.00;
@@ -1257,62 +1248,50 @@ double [] i = new double[13];
     }//GEN-LAST:event_QueensMouseClicked
 
     private void TxtCoffeCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtCoffeCakeMouseClicked
-        // TODO add your handling code here:
         TxtCoffeCake.setText(null);
     }//GEN-LAST:event_TxtCoffeCakeMouseClicked
 
     private void TxtIceCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtIceCapMouseClicked
-        // TODO add your handling code here:
         TxtIceCap.setText(null);
     }//GEN-LAST:event_TxtIceCapMouseClicked
 
     private void TxtEspressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtEspressoMouseClicked
-        // TODO add your handling code here:
         TxtEspresso.setText(null);
     }//GEN-LAST:event_TxtEspressoMouseClicked
 
     private void TxtIcedLatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtIcedLatteMouseClicked
-        // TODO add your handling code here:
         TxtIcedLatte.setText(null);
     }//GEN-LAST:event_TxtIcedLatteMouseClicked
 
     private void TxtLatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtLatteMouseClicked
-        // TODO add your handling code here:
         TxtLatte.setText(null);
     }//GEN-LAST:event_TxtLatteMouseClicked
 
     private void TxtRedVelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtRedVelMouseClicked
-        // TODO add your handling code here:
         TxtRedVel.setText(null);
     }//GEN-LAST:event_TxtRedVelMouseClicked
 
     private void TxtBastonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtBastonMouseClicked
-        // TODO add your handling code here:
         TxtBaston.setText(null);
     }//GEN-LAST:event_TxtBastonMouseClicked
 
     private void TxtBlackForestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtBlackForestMouseClicked
-        // TODO add your handling code here:
          TxtBlackForest.setText(null);
     }//GEN-LAST:event_TxtBlackForestMouseClicked
 
     private void TxtLagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtLagosMouseClicked
-        // TODO add your handling code here:
         TxtLagos.setText(null);
     }//GEN-LAST:event_TxtLagosMouseClicked
 
     private void TxtKillMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtKillMouseClicked
-        // TODO add your handling code here:
         TxtKill.setText(null);
     }//GEN-LAST:event_TxtKillMouseClicked
 
     private void TxtCarltonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtCarltonMouseClicked
-        // TODO add your handling code here:
         TxtCarlton.setText(null);
     }//GEN-LAST:event_TxtCarltonMouseClicked
 
     private void TxtQueenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtQueenMouseClicked
-        // TODO add your handling code here:
         TxtQueen.setText(null);
     }//GEN-LAST:event_TxtQueenMouseClicked
 
